@@ -459,5 +459,69 @@
 
 <script src="script.js"></script>
 
+
+<section id="gestion-stock" class="stock-section">
+    <div class="stock-container">
+        <h2>📦 Gestion du stock</h2>
+        <p class="stock-intro">Gérez vos disponibilités directement depuis votre téléphone.</p>
+
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <h3>1,5 – 1,7 kg</h3>
+                <p>Prix : <strong>3 500 FCFA</strong></p>
+                <div class="stock-quantity">
+                    <button type="button" onclick="modifierStock(0, -1)">−</button>
+                    <span id="stock-0">0</span>
+                    <button type="button" onclick="modifierStock(0, 1)">+</button>
+                </div>
+                <p id="etat-0" class="stock-etat">Rupture de stock</p>
+            </div>
+
+            <div class="stock-card">
+                <h3>1,7 – 1,9 kg</h3>
+                <p>Prix : <strong>3 750 FCFA</strong></p>
+                <div class="stock-quantity">
+                    <button type="button" onclick="modifierStock(1, -1)">−</button>
+                    <span id="stock-1">0</span>
+                    <button type="button" onclick="modifierStock(1, 1)">+</button>
+                </div>
+                <p id="etat-1" class="stock-etat">Rupture de stock</p>
+            </div>
+
+            <div class="stock-card">
+                <h3>1,9 – 2,1 kg</h3>
+                <p>Prix : <strong>4 000 FCFA</strong></p>
+                <div class="stock-quantity">
+                    <button type="button" onclick="modifierStock(2, -1)">−</button>
+                    <span id="stock-2">0</span>
+                    <button type="button" onclick="modifierStock(2, 1)">+</button>
+                </div>
+                <p id="etat-2" class="stock-etat">Rupture de stock</p>
+            </div>
+
+            <div class="stock-card">
+                <h3>2,1 – 2,5 kg</h3>
+                <p>Prix : <strong>4 500 FCFA</strong></p>
+                <div class="stock-quantity">
+                    <button type="button" onclick="modifierStock(3, -1)">−</button>
+                    <span id="stock-3">0</span>
+                    <button type="button" onclick="modifierStock(3, 1)">+</button>
+                </div>
+                <p id="etat-3" class="stock-etat">Rupture de stock</p>
+            </div>
+
+        </div>
+
+        <div class="stock-total">
+            Total disponible : <strong id="stock-total">0</strong> poulet(s)
+        </div>
+
+        <button type="button" class="stock-reset" onclick="reinitialiserStock()">
+            Réinitialiser le stock
+        </button>
+    </div>
+</section>
+
 </body>
 </html>
