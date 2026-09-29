@@ -544,3 +544,30 @@ h1 span {
     }
 }
 
+
+/* ================================
+   ACCES ADMIN DU STOCK
+   ================================ */
+
+.stock-admin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 20px 0 30px;
+}
+
+.stock-admin button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#admin-status {
+    font-size: 14px;
+    font-weight: bold;
+}
+
