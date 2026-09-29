@@ -72,4 +72,30 @@
         </button>
     </div>
 </section>
+
+<script>
+// Stock simple éditable
+let stock = JSON.parse(localStorage.getItem('aviterroir_stock')||'{"poulets":50,"oeufs":100,"aliment":20}');
+function renderStock(){
+  const el=document.getElementById('gestion-stock');
+  if(!el) return;
+  el.innerHTML = `
+    <h2>Gestion du Stock</h2>
+    <div style="display:grid;gap:15px;padding:20px;max-width:500px;margin:auto">
+      <label>Poulets: <input type="number" id="s-poulets" value="${stock.poulets}"> </label>
+      <label>Oeufs: <input type="number" id="s-oeufs" value="${stock.oeufs}"> </label>
+      <label>Aliment (kg): <input type="number" id="s-aliment" value="${stock.aliment}"> </label>
+      <button onclick="saveStock()" style="padding:10px;background:#2e7d32;color:white;border:none;border-radius:8px">Enregistrer Stock</button>
+      <p id="msg"></p>
+    </div>`;
+}
+function saveStock(){
+  stock.poulets=document.getElementById('s-poulets').value;
+  stock.oeufs=document.getElementById('s-oeufs').value;
+  stock.aliment=document.getElementById('s-aliment').value;
+  localStorage.setItem('aviterroir_stock',JSON.stringify(stock));
+  document.getElementById('msg').innerText='✅ Stock enregistré !';
+}
+renderStock();
+</script>
 </body></html>
